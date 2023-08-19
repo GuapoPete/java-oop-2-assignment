@@ -2,17 +2,18 @@ package mobilePhone;
 
 public class Main {
     public static void main(String[] args) {
-    	
-        // Instantiate a brand new MobilePhone object and pass it the 4 parameters for your phone (Brand, Model, Phone Number, and Storage Capacity)
+        MobilePhone phone1 = new MobilePhone("Samsung", "Galaxy S21", "123-456-7890", 128);
+        MobilePhone phone2 = new MobilePhone("Apple", "iPhone 12", "987-654-3210", 256);
 
-        
-        // Call the makeCall() method using your phone object - remember to pass it a phone number as input!
+        phone1.makeCall("555-1234");
+        phone1.installApp("Facebook");
+        phone1.displayInfo();
 
-        
-        // Call the installApp() method using your phone object - remember to pass it an app name as input!
+        System.out.println();
 
-        
-        // Display your phones information using the displayInfo() method!
-
+        phone2.makeCall("555-5678");
+        phone2.installApp("Instagram");
+        phone2.displayInfo();
     }
 }
+

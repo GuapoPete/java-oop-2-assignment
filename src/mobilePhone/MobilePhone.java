@@ -1,50 +1,71 @@
 package mobilePhone;
 
 public class MobilePhone {
-	// Please create 4 instance variables for our MobilePhone class:
-	// 1.Brand
-	// 2.Model
-	// 3.Phone Number
-	// 4.Storage Capacity
-	// Think about what data types would work best with these fields :)
+    // Instance variables
+    private String brand;
+    private String model;
+    private String phoneNumber;
+    private int storageCapacity;
 
+    // Constructor
+    public MobilePhone(String brand, String model, String phoneNumber, int storageCapacity) {
+        this.brand = brand;
+        this.model = model;
+        this.phoneNumber = phoneNumber;
+        this.storageCapacity = storageCapacity;
+    }
 
-	// Let's create a public constructor for our MobilePhone class
-	// Given 4 pieces of information as input (brand, model, operatingSystem, and
-	// storageCapacity),
-	// Set the instance variables of your object accordingly
+    // Getter and setter methods for brand
+    public String getBrand() {
+        return brand;
+    }
 
-	
-	
-	// Create getter and setter methods for each of our instance variables
-	// Please at least write 1 set of getter/setter by hand. After you get the
-	// hang of it, you can go to 'source'->'generate getters and setters'->checkmark
-	// all of the fields you want
-	// getters and setters for->'generate'
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
 
+    // Getter and setter methods for model
+    public String getModel() {
+        return model;
+    }
 
-	// Lets make a couple custom phone-related methods:
+    public void setModel(String model) {
+        this.model = model;
+    }
 
-	// 1. A makeCall method that takes a phone number as a parameter and then
-	// prints:
-	// 'We are calling {the input phone number} from our {brand} {model} phone!'
+    // Getter and setter methods for phoneNumber
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-	
-	// 2. An installApp method that takes an app name String as input and then
-	// prints:
-	// 'Installing {input app name} on our {brand} {model} phone!'
+    // Getter and setter methods for storageCapacity
+    public int getStorageCapacity() {
+        return storageCapacity;
+    }
 
+    public void setStorageCapacity(int storageCapacity) {
+        this.storageCapacity = storageCapacity;
+    }
 
-	
-	// 3. Lastly, a displayInfo method that takes no parameters and prints all
-	// information about
-	// the phone:
-	// Brand: {brand}
-	// Model: {model}
-	// Phone Number: {phone number}
-	// Storage Capacity: {storage capacity}GB
+    // Custom phone-related methods
+    public void makeCall(String phoneNumber) {
+        System.out.println("We are calling " + phoneNumber + " from our " + brand + " " + model + " phone!");
+    }
 
+    public void installApp(String appName) {
+        System.out.println("Installing " + appName + " on our " + brand + " " + model + " phone!");
+    }
+
+    public void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Phone Number: " + phoneNumber);
+        System.out.println("Storage Capacity: " + storageCapacity + "GB");
+    }
 
 
 }
